@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Node.js (report generation)
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project specific
+.gstack/
+report/extracted_images/
+report/~$*.docx
+
+# Large generated files (keep scripts, not outputs)
+report/淘宝用户行为分析系统_大作业报告.docx
+report/淘宝用户行为分析系统_大作业报告_完善版.docx
+report/淘宝用户行为分析系统_大作业报告_完善版_v2.docx
+report/附录_关键代码清单.docx
+report/附录_关键代码清单_完善版.docx
+report/frontend_screenshot.png
+
+# Cluster-specific (not needed for source code)
+*.log
+*.out
+*.err

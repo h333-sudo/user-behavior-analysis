@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>淘宝用户行为数据分析</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="header fade-in">
+  <div class="header-left"><h1>淘宝用户行为<span class="accent">数据分析</span></h1></div>
+  <div class="header-right">2017.11.25 — 2017.12.03<br>Hadoop + PySpark + ECharts</div>
+</div>
+
+<div class="data-hint" id="dataHint"></div>
+
+<div class="control-bar fade-in" style="animation-delay:0.1s">
+  <div class="date-picker">
+    <label>日期</label>
+    <select id="dateStart"></select>
+    <span class="sep">—</span>
+    <select id="dateEnd"></select>
+    <button onclick="applyDateFilter()">应用</button>
+    <button onclick="resetDateFilter()">重置</button>
+  </div>
+  <div class="search-group">
+    <select id="searchType"><option value="item">商品ID</option><option value="category">类目ID</option></select>
+    <input type="text" id="searchInput" placeholder="搜索…">
+    <button onclick="doSearch()">搜索</button>
+    <button onclick="clearSearch()">清空</button>
+  </div>
+</div>
+
+<div class="filter-indicator" id="filterIndicator">
+  <span>当前过滤：<span class="tag" id="filterTag"></span></span>
+  <span class="clear-btn" onclick="clearBehaviorFilter()">清除过滤</span>
+</div>
+
+<div class="detail-panel" id="detailPanel">
+  <button class="close-btn" onclick="closePanel()">×</button>
+  <h3 id="panelTitle">详情</h3>
+  <div id="panelContent"></div>
+</div>
+
+<div class="fullscreen-overlay" id="fsOverlay">
+  <div class="fs-header">
+    <h2 id="fsTitle"></h2>
+    <button class="fs-close" onclick="closeFullscreen()">×</button>
+  </div>
+  <div class="fs-chart" id="fsChart"></div>
+</div>
+
+<div class="summary-cards">
+  <div class="summary-card fade-in" style="--i:0"><div class="label">行为记录</div><div class="value" id="totalRecords">—</div></div>
+  <div class="summary-card fade-in" style="--i:1"><div class="label">独立用户</div><div class="value" id="totalUV">—</div></div>
+  <div class="summary-card fade-in" style="--i:2"><div class="label">浏览量</div><div class="value" id="totalPV">—</div></div>
+  <div class="summary-card fade-in" style="--i:3"><div class="label">购买量</div><div class="value" id="totalBuy">—</div></div>
+  <div class="summary-card fade-in" style="--i:4"><div class="label">转化率</div><div class="value" id="avgCVR">—</div></div>
+</div>
+
+<div class="tab-bar fade-in" style="animation-delay:0.3s">
+  <button class="tab-btn active" onclick="switchTab('overview',this)">行为概览</button>
+  <button class="tab-btn" onclick="switchTab('user',this)">用户分析</button>
+  <button class="tab-btn" onclick="switchTab('product',this)">商品分析</button>
+  <button class="tab-btn" onclick="switchTab('funnel',this)">转化漏斗</button>
+  <button class="tab-btn" onclick="switchTab('time',this)">时间分析</button>
+</div>
+
+<div class="tab-section active" id="tab-overview"><div class="dashboard">
+  <div class="chart-card"><h3>每日 UV · PV 趋势</h3><button class="fs-btn" onclick="goFullscreen('每日UV·PV趋势','chartDailyUVPV')">⛶</button><div class="chart-container" id="chartDailyUVPV"></div></div>
+  <div class="chart-card"><h3>行为类型分布</h3><button class="fs-btn" onclick="goFullscreen('行为类型分布','chartBehaviorDist')">⛶</button><div class="chart-container" id="chartBehaviorDist"></div></div>
+  <div class="chart-card full-width"><h3>日留存率趋势</h3><button class="fs-btn" onclick="goFullscreen('日留存率趋势','chartRetention')">⛶</button><div class="chart-container" id="chartRetention"></div></div>
+</div></div>
+
+<div class="tab-section" id="tab-user"><div class="dashboard">
+  <div class="chart-card"><h3>RFM 用户分层</h3><button class="fs-btn" onclick="goFullscreen('RFM用户分层','chartRFM')">⛶</button><div class="chart-container" id="chartRFM"></div></div>
+  <div class="chart-card"><h3>RFM 评分分布</h3><button class="fs-btn" onclick="goFullscreen('RFM评分分布','chartRFMScore')">⛶</button><div class="chart-container" id="chartRFMScore"></div></div>
+  <div class="chart-card"><h3>用户生命周期</h3><button class="fs-btn" onclick="goFullscreen('用户生命周期','chartLifecycle')">⛶</button><div class="chart-container" id="chartLifecycle"></div></div>
+  <div class="chart-card"><h3>首购间隔分布</h3><button class="fs-btn" onclick="goFullscreen('首购间隔分布','chartPurchaseGap')">⛶</button><div class="chart-container" id="chartPurchaseGap"></div></div>
+  <div class="chart-card"><h3>高价值用户活跃时段</h3><button class="fs-btn" onclick="goFullscreen('高价值用户活跃时段','chartHVHourly')">⛶</button><div class="chart-container" id="chartHVHourly"></div></div>
+  <div class="chart-card"><h3>用户活跃天数分布</h3><button class="fs-btn" onclick="goFullscreen('用户活跃天数分布','chartActiveDays')">⛶</button><div class="chart-container" id="chartActiveDays"></div></div>
+  <div class="chart-card full-width"><h3>用户行为路径 TOP 15</h3><button class="fs-btn" onclick="goFullscreen('用户行为路径TOP15','chartBehaviorPath')">⛶</button><div class="chart-container" id="chartBehaviorPath"></div></div>
+</div></div>
+
+<div class="tab-section" id="tab-product"><div class="dashboard">
+  <div class="chart-card"><h3>商品热度排行 TOP 20</h3><button class="fs-btn" onclick="goFullscreen('商品热度TOP20','chartItemHot')">⛶</button><div class="chart-container tall" id="chartItemHot"></div></div>
+  <div class="chart-card"><h3>类目热度排行 TOP 20</h3><button class="fs-btn" onclick="goFullscreen('类目热度TOP20','chartCategoryHot')">⛶</button><div class="chart-container tall" id="chartCategoryHot"></div></div>
+  <div class="chart-card"><h3>商品转化率 TOP 15</h3><button class="fs-btn" onclick="goFullscreen('商品转化率TOP15','chartItemCVR')">⛶</button><div class="chart-container" id="chartItemCVR"></div></div>
+</div></div>
+
+<div class="tab-section" id="tab-funnel"><div class="dashboard">
+  <div class="chart-card full-width"><h3>转化漏斗</h3><button class="fs-btn" onclick="goFullscreen('转化漏斗','chartFunnel')">⛶</button><div class="chart-container tall" id="chartFunnel"></div></div>
+  <div class="chart-card"><h3>各行为用户数对比</h3><button class="fs-btn" onclick="goFullscreen('各行为用户数','chartFunnelBar')">⛶</button><div class="chart-container" id="chartFunnelBar"></div></div>
+  <div class="chart-card"><h3>高流量低转化商品 TOP 15</h3><button class="fs-btn" onclick="goFullscreen('高流量低转化','chartLowCVR')">⛶</button><div class="chart-container" id="chartLowCVR"></div></div>
+</div></div>
+
+<div class="tab-section" id="tab-time"><div class="dashboard">
+  <div class="chart-card"><h3>每小时转化率</h3><button class="fs-btn" onclick="goFullscreen('每小时转化率','chartHourlyCVR')">⛶</button><div class="chart-container" id="chartHourlyCVR"></div></div>
+  <div class="chart-card"><h3>工作日 vs 周末</h3><button class="fs-btn" onclick="goFullscreen('工作日vs周末','chartWeekdayWeekend')">⛶</button><div class="chart-container" id="chartWeekdayWeekend"></div></div>
+  <div class="chart-card full-width"><h3>各日期漏斗转化趋势</h3><button class="fs-btn" onclick="goFullscreen('漏斗转化趋势','chartDailyFunnelTrend')">⛶</button><div class="chart-container" id="chartDailyFunnelTrend"></div></div>
+</div></div>
+
+<div class="footer">淘宝用户行为数据分析 · 高校大数据课程作业 · 2017</div>
+
+<!-- 加载顺序: utils → registry → demo → charts → app -->
+<script src="js/utils.js"></script>
+<script src="charts/registry.js"></script>
+<script src="js/demo.js"></script>
+<script src="charts/dailyUVPV.js"></script>
+<script src="charts/behaviorDist.js"></script>
+<script src="charts/retention.js"></script>
+<script src="charts/rfm.js"></script>
+<script src="charts/rfmScore.js"></script>
+<script src="charts/lifecycle.js"></script>
+<script src="charts/purchaseGap.js"></script>
+<script src="charts/hvHourly.js"></script>
+<script src="charts/activeDays.js"></script>
+<script src="charts/behaviorPath.js"></script>
+<script src="charts/itemHot.js"></script>
+<script src="charts/categoryHot.js"></script>
+<script src="charts/itemCVR.js"></script>
+<script src="charts/funnel.js"></script>
+<script src="charts/funnelBar.js"></script>
+<script src="charts/lowCVR.js"></script>
+<script src="charts/hourlyCVR.js"></script>
+<script src="charts/weekdayWeekend.js"></script>
+<script src="charts/dailyFunnelTrend.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
