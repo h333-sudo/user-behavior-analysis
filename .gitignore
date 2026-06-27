@@ -27,13 +27,21 @@ desktop.ini
 report/extracted_images/
 report/~$*.docx
 
+# Claude development files
+CLAUDE.md
+fixing.md
+metrics_analysis.md
+project_summary.md
+system_architecture.md
+data_analysis_report.md
+
+# Deprecated files
+task2_core_statistics.py
+
 # Large generated files (keep scripts, not outputs)
-report/淘宝用户行为分析系统_大作业报告.docx
-report/淘宝用户行为分析系统_大作业报告_完善版.docx
-report/淘宝用户行为分析系统_大作业报告_完善版_v2.docx
-report/附录_关键代码清单.docx
-report/附录_关键代码清单_完善版.docx
-report/frontend_screenshot.png
+report/*.docx
+report/*.png
+report/node_modules/
 
 # Cluster-specific (not needed for source code)
 *.log
