@@ -1,0 +1,66 @@
+[
+  {
+    "path_segment": "pv → pv",
+    "path_count": 69066818
+  },
+  {
+    "path_segment": "pv → cart",
+    "path_count": 3586181
+  },
+  {
+    "path_segment": "cart → pv",
+    "path_count": 3503573
+  },
+  {
+    "path_segment": "fav → pv",
+    "path_count": 1851381
+  },
+  {
+    "path_segment": "pv → fav",
+    "path_count": 1808013
+  },
+  {
+    "path_segment": "pv → buy",
+    "path_count": 1057941
+  },
+  {
+    "path_segment": "cart → cart",
+    "path_count": 827206
+  },
+  {
+    "path_segment": "buy → pv",
+    "path_count": 811290
+  },
+  {
+    "path_segment": "fav → fav",
+    "path_count": 497596
+  },
+  {
+    "path_segment": "buy → buy",
+    "path_count": 308662
+  },
+  {
+    "path_segment": "buy → cart",
+    "path_count": 52274
+  },
+  {
+    "path_segment": "cart → fav",
+    "path_count": 51294
+  },
+  {
+    "path_segment": "fav → cart",
+    "path_count": 50530
+  },
+  {
+    "path_segment": "cart → buy",
+    "path_count": 47312
+  },
+  {
+    "path_segment": "buy → fav",
+    "path_count": 22185
+  },
+  {
+    "path_segment": "fav → buy",
+    "path_count": 17070
+  }
+]

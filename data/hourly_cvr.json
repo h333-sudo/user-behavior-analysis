@@ -1,0 +1,242 @@
+[
+  {
+    "hour": 0,
+    "pv_count": 3056935,
+    "buy_count": 57775,
+    "pv_uv": 306898,
+    "buy_uv": 38928,
+    "total_behavior": 3402198,
+    "pv_to_buy_rate": 1.89,
+    "uv_cvr": 12.68
+  },
+  {
+    "hour": 1,
+    "pv_count": 1421673,
+    "buy_count": 23169,
+    "pv_uv": 161332,
+    "buy_uv": 15885,
+    "total_behavior": 1581628,
+    "pv_to_buy_rate": 1.63,
+    "uv_cvr": 9.85
+  },
+  {
+    "hour": 2,
+    "pv_count": 769269,
+    "buy_count": 12012,
+    "pv_uv": 94660,
+    "buy_uv": 8274,
+    "total_behavior": 855227,
+    "pv_to_buy_rate": 1.56,
+    "uv_cvr": 8.74
+  },
+  {
+    "hour": 3,
+    "pv_count": 524992,
+    "buy_count": 8025,
+    "pv_uv": 68678,
+    "buy_uv": 5595,
+    "total_behavior": 583953,
+    "pv_to_buy_rate": 1.53,
+    "uv_cvr": 8.15
+  },
+  {
+    "hour": 4,
+    "pv_count": 449628,
+    "buy_count": 6748,
+    "pv_uv": 61796,
+    "buy_uv": 4723,
+    "total_behavior": 499706,
+    "pv_to_buy_rate": 1.5,
+    "uv_cvr": 7.64
+  },
+  {
+    "hour": 5,
+    "pv_count": 581694,
+    "buy_count": 8135,
+    "pv_uv": 81363,
+    "buy_uv": 5963,
+    "total_behavior": 646085,
+    "pv_to_buy_rate": 1.4,
+    "uv_cvr": 7.33
+  },
+  {
+    "hour": 6,
+    "pv_count": 1226653,
+    "buy_count": 18014,
+    "pv_uv": 172678,
+    "buy_uv": 13963,
+    "total_behavior": 1366496,
+    "pv_to_buy_rate": 1.47,
+    "uv_cvr": 8.09
+  },
+  {
+    "hour": 7,
+    "pv_count": 2228959,
+    "buy_count": 37679,
+    "pv_uv": 316478,
+    "buy_uv": 29216,
+    "total_behavior": 2488350,
+    "pv_to_buy_rate": 1.69,
+    "uv_cvr": 9.23
+  },
+  {
+    "hour": 8,
+    "pv_count": 3042342,
+    "buy_count": 64916,
+    "pv_uv": 425606,
+    "buy_uv": 49285,
+    "total_behavior": 3403015,
+    "pv_to_buy_rate": 2.13,
+    "uv_cvr": 11.58
+  },
+  {
+    "hour": 9,
+    "pv_count": 3728498,
+    "buy_count": 96134,
+    "pv_uv": 497611,
+    "buy_uv": 71632,
+    "total_behavior": 4182498,
+    "pv_to_buy_rate": 2.58,
+    "uv_cvr": 14.4
+  },
+  {
+    "hour": 10,
+    "pv_count": 4334810,
+    "buy_count": 127932,
+    "pv_uv": 552520,
+    "buy_uv": 92853,
+    "total_behavior": 4877457,
+    "pv_to_buy_rate": 2.95,
+    "uv_cvr": 16.81
+  },
+  {
+    "hour": 11,
+    "pv_count": 4213518,
+    "buy_count": 122046,
+    "pv_uv": 561541,
+    "buy_uv": 89500,
+    "total_behavior": 4741807,
+    "pv_to_buy_rate": 2.9,
+    "uv_cvr": 15.94
+  },
+  {
+    "hour": 12,
+    "pv_count": 4255794,
+    "buy_count": 118591,
+    "pv_uv": 568023,
+    "buy_uv": 87699,
+    "total_behavior": 4771058,
+    "pv_to_buy_rate": 2.79,
+    "uv_cvr": 15.44
+  },
+  {
+    "hour": 13,
+    "pv_count": 4653933,
+    "buy_count": 123426,
+    "pv_uv": 578104,
+    "buy_uv": 90447,
+    "total_behavior": 5208032,
+    "pv_to_buy_rate": 2.65,
+    "uv_cvr": 15.65
+  },
+  {
+    "hour": 14,
+    "pv_count": 4642054,
+    "buy_count": 122171,
+    "pv_uv": 569523,
+    "buy_uv": 89200,
+    "total_behavior": 5189879,
+    "pv_to_buy_rate": 2.63,
+    "uv_cvr": 15.66
+  },
+  {
+    "hour": 15,
+    "pv_count": 4806704,
+    "buy_count": 122728,
+    "pv_uv": 580585,
+    "buy_uv": 89392,
+    "total_behavior": 5365022,
+    "pv_to_buy_rate": 2.55,
+    "uv_cvr": 15.4
+  },
+  {
+    "hour": 16,
+    "pv_count": 4607743,
+    "buy_count": 116444,
+    "pv_uv": 574316,
+    "buy_uv": 85438,
+    "total_behavior": 5151944,
+    "pv_to_buy_rate": 2.53,
+    "uv_cvr": 14.88
+  },
+  {
+    "hour": 17,
+    "pv_count": 4203395,
+    "buy_count": 101300,
+    "pv_uv": 561313,
+    "buy_uv": 75819,
+    "total_behavior": 4697668,
+    "pv_to_buy_rate": 2.41,
+    "uv_cvr": 13.51
+  },
+  {
+    "hour": 18,
+    "pv_count": 4313516,
+    "buy_count": 95907,
+    "pv_uv": 560356,
+    "buy_uv": 73158,
+    "total_behavior": 4795878,
+    "pv_to_buy_rate": 2.22,
+    "uv_cvr": 13.06
+  },
+  {
+    "hour": 19,
+    "pv_count": 5430878,
+    "buy_count": 115032,
+    "pv_uv": 602061,
+    "buy_uv": 85920,
+    "total_behavior": 6021741,
+    "pv_to_buy_rate": 2.12,
+    "uv_cvr": 14.27
+  },
+  {
+    "hour": 20,
+    "pv_count": 6586331,
+    "buy_count": 133859,
+    "pv_uv": 641227,
+    "buy_uv": 98084,
+    "total_behavior": 7304805,
+    "pv_to_buy_rate": 2.03,
+    "uv_cvr": 15.3
+  },
+  {
+    "hour": 21,
+    "pv_count": 7538382,
+    "buy_count": 145431,
+    "pv_uv": 661594,
+    "buy_uv": 104573,
+    "total_behavior": 8369711,
+    "pv_to_buy_rate": 1.93,
+    "uv_cvr": 15.81
+  },
+  {
+    "hour": 22,
+    "pv_count": 7443069,
+    "buy_count": 138263,
+    "pv_uv": 629328,
+    "buy_uv": 97521,
+    "total_behavior": 8299803,
+    "pv_to_buy_rate": 1.86,
+    "uv_cvr": 15.5
+  },
+  {
+    "hour": 23,
+    "pv_count": 5599901,
+    "buy_count": 100070,
+    "pv_uv": 496422,
+    "buy_uv": 69485,
+    "total_behavior": 6291221,
+    "pv_to_buy_rate": 1.79,
+    "uv_cvr": 14.0
+  }
+]

@@ -1,0 +1,258 @@
+[
+  {
+    "path3": "pv → pv → pv",
+    "count": 55324842
+  },
+  {
+    "path3": "pv → pv → cart",
+    "count": 2633008
+  },
+  {
+    "path3": "cart → pv → pv",
+    "count": 2564209
+  },
+  {
+    "path3": "pv → cart → pv",
+    "count": 2458636
+  },
+  {
+    "path3": "pv → fav → pv",
+    "count": 1320833
+  },
+  {
+    "path3": "fav → pv → pv",
+    "count": 1319902
+  },
+  {
+    "path3": "pv → pv → fav",
+    "count": 1298178
+  },
+  {
+    "path3": "pv → pv → buy",
+    "count": 817060
+  },
+  {
+    "path3": "buy → pv → pv",
+    "count": 573223
+  },
+  {
+    "path3": "pv → buy → pv",
+    "count": 485631
+  },
+  {
+    "path3": "pv → cart → cart",
+    "count": 477072
+  },
+  {
+    "path3": "cart → cart → pv",
+    "count": 476123
+  },
+  {
+    "path3": "cart → pv → cart",
+    "count": 393668
+  },
+  {
+    "path3": "fav → pv → fav",
+    "count": 242158
+  },
+  {
+    "path3": "fav → fav → pv",
+    "count": 241278
+  },
+  {
+    "path3": "pv → fav → fav",
+    "count": 227017
+  },
+  {
+    "path3": "cart → cart → cart",
+    "count": 190495
+  },
+  {
+    "path3": "fav → fav → fav",
+    "count": 173713
+  },
+  {
+    "path3": "pv → buy → buy",
+    "count": 151111
+  },
+  {
+    "path3": "buy → buy → buy",
+    "count": 108868
+  },
+  {
+    "path3": "buy → buy → pv",
+    "count": 101393
+  },
+  {
+    "path3": "fav → pv → cart",
+    "count": 40541
+  },
+  {
+    "path3": "cart → pv → buy",
+    "count": 38393
+  },
+  {
+    "path3": "buy → pv → buy",
+    "count": 31911
+  },
+  {
+    "path3": "cart → pv → fav",
+    "count": 31428
+  },
+  {
+    "path3": "buy → cart → pv",
+    "count": 30124
+  },
+  {
+    "path3": "cart → fav → pv",
+    "count": 29874
+  },
+  {
+    "path3": "pv → cart → buy",
+    "count": 28942
+  },
+  {
+    "path3": "buy → pv → cart",
+    "count": 28879
+  },
+  {
+    "path3": "pv → cart → fav",
+    "count": 28496
+  },
+  {
+    "path3": "fav → cart → pv",
+    "count": 27546
+  },
+  {
+    "path3": "pv → buy → cart",
+    "count": 26783
+  },
+  {
+    "path3": "pv → fav → cart",
+    "count": 26376
+  },
+  {
+    "path3": "fav → pv → buy",
+    "count": 24103
+  },
+  {
+    "path3": "cart → buy → pv",
+    "count": 20413
+  },
+  {
+    "path3": "buy → fav → pv",
+    "count": 13486
+  },
+  {
+    "path3": "pv → buy → fav",
+    "count": 11971
+  },
+  {
+    "path3": "buy → pv → fav",
+    "count": 10974
+  },
+  {
+    "path3": "fav → fav → cart",
+    "count": 9229
+  },
+  {
+    "path3": "pv → fav → buy",
+    "count": 8684
+  },
+  {
+    "path3": "cart → fav → fav",
+    "count": 8401
+  },
+  {
+    "path3": "fav → cart → cart",
+    "count": 7771
+  },
+  {
+    "path3": "cart → cart → fav",
+    "count": 7408
+  },
+  {
+    "path3": "buy → cart → cart",
+    "count": 7238
+  },
+  {
+    "path3": "buy → buy → cart",
+    "count": 7232
+  },
+  {
+    "path3": "cart → cart → buy",
+    "count": 6706
+  },
+  {
+    "path3": "fav → buy → pv",
+    "count": 6639
+  },
+  {
+    "path3": "fav → cart → fav",
+    "count": 5254
+  },
+  {
+    "path3": "cart → buy → buy",
+    "count": 5230
+  },
+  {
+    "path3": "fav → fav → buy",
+    "count": 4071
+  },
+  {
+    "path3": "cart → fav → cart",
+    "count": 4006
+  },
+  {
+    "path3": "buy → fav → fav",
+    "count": 3098
+  },
+  {
+    "path3": "cart → buy → cart",
+    "count": 3007
+  },
+  {
+    "path3": "buy → buy → fav",
+    "count": 2394
+  },
+  {
+    "path3": "fav → buy → buy",
+    "count": 2183
+  },
+  {
+    "path3": "buy → cart → buy",
+    "count": 1418
+  },
+  {
+    "path3": "fav → buy → fav",
+    "count": 1160
+  },
+  {
+    "path3": "fav → cart → buy",
+    "count": 580
+  },
+  {
+    "path3": "buy → cart → fav",
+    "count": 518
+  },
+  {
+    "path3": "buy → fav → cart",
+    "count": 474
+  },
+  {
+    "path3": "cart → buy → fav",
+    "count": 452
+  },
+  {
+    "path3": "buy → fav → buy",
+    "count": 442
+  },
+  {
+    "path3": "cart → fav → buy",
+    "count": 425
+  },
+  {
+    "path3": "fav → buy → cart",
+    "count": 407
+  }
+]

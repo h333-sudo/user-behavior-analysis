@@ -1,0 +1,17 @@
+[
+  {
+    "conversion_rate": 100.0,
+    "stage": "浏览(pv)",
+    "user_count": 984105
+  },
+  {
+    "conversion_rate": 86.93,
+    "stage": "加购/收藏(cart+fav)",
+    "user_count": 855498
+  },
+  {
+    "conversion_rate": 61.0,
+    "stage": "购买(buy)",
+    "user_count": 600278
+  }
+]

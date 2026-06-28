@@ -1,0 +1,65 @@
+[
+  {
+    "date": "2017-11-25",
+    "total_users": 706641,
+    "new_users": 706641,
+    "returning_users": 0,
+    "new_user_ratio": 100.0
+  },
+  {
+    "date": "2017-11-26",
+    "total_users": 715516,
+    "new_users": 158188,
+    "returning_users": 557328,
+    "new_user_ratio": 22.11
+  },
+  {
+    "date": "2017-11-27",
+    "total_users": 710094,
+    "new_users": 63825,
+    "returning_users": 646269,
+    "new_user_ratio": 8.99
+  },
+  {
+    "date": "2017-11-28",
+    "total_users": 709257,
+    "new_users": 31331,
+    "returning_users": 677926,
+    "new_user_ratio": 4.42
+  },
+  {
+    "date": "2017-11-29",
+    "total_users": 718922,
+    "new_users": 17931,
+    "returning_users": 700991,
+    "new_user_ratio": 2.49
+  },
+  {
+    "date": "2017-11-30",
+    "total_users": 730597,
+    "new_users": 9801,
+    "returning_users": 720796,
+    "new_user_ratio": 1.34
+  },
+  {
+    "date": "2017-12-01",
+    "total_users": 740139,
+    "new_users": 255,
+    "returning_users": 739884,
+    "new_user_ratio": 0.03
+  },
+  {
+    "date": "2017-12-02",
+    "total_users": 970401,
+    "new_users": 18,
+    "returning_users": 970383,
+    "new_user_ratio": 0.0
+  },
+  {
+    "date": "2017-12-03",
+    "total_users": 966977,
+    "new_users": 1,
+    "returning_users": 966976,
+    "new_user_ratio": 0.0
+  }
+]

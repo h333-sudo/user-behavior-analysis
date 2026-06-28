@@ -1,0 +1,22 @@
+[
+  {
+    "user_segment": "潜力用户",
+    "user_count": 231737
+  },
+  {
+    "user_segment": "一般用户",
+    "user_count": 213003
+  },
+  {
+    "user_segment": "高价值用户",
+    "user_count": 109455
+  },
+  {
+    "user_segment": "预流失用户",
+    "user_count": 96363
+  },
+  {
+    "user_segment": "流失用户",
+    "user_count": 21846
+  }
+]

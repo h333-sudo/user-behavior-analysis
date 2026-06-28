@@ -1,0 +1,22 @@
+[
+  {
+    "buy": 1093368,
+    "buy_rate": 2.37,
+    "daily_avg_behavior": 10314112,
+    "days": 5,
+    "pv": 46172892,
+    "total_behavior": 51570562,
+    "type": "工作日",
+    "uv": 978988
+  },
+  {
+    "buy": 922439,
+    "buy_rate": 2.12,
+    "daily_avg_behavior": 12131155,
+    "days": 4,
+    "pv": 43487779,
+    "total_behavior": 48524620,
+    "type": "周末",
+    "uv": 987588
+  }
+]

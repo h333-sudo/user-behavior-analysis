@@ -1,0 +1,92 @@
+[
+  {
+    "first_date": "2017-11-25",
+    "new_users": 706641,
+    "retained_day1": 557328,
+    "retention_rate_day1": 78.87,
+    "retained_day3": 536463,
+    "retention_rate_day3": 75.92,
+    "retained_day7": 696406,
+    "retention_rate_day7": 98.55
+  },
+  {
+    "first_date": "2017-11-26",
+    "new_users": 158188,
+    "retained_day1": 103431,
+    "retention_rate_day1": 65.38,
+    "retained_day3": 104190,
+    "retention_rate_day3": 65.86,
+    "retained_day7": 154003,
+    "retention_rate_day7": 97.35
+  },
+  {
+    "first_date": "2017-11-27",
+    "new_users": 63825,
+    "retained_day1": 39280,
+    "retention_rate_day1": 61.54,
+    "retained_day3": 41082,
+    "retention_rate_day3": 64.37,
+    "retained_day7": 0,
+    "retention_rate_day7": 0.0
+  },
+  {
+    "first_date": "2017-11-28",
+    "new_users": 31331,
+    "retained_day1": 19366,
+    "retention_rate_day1": 61.81,
+    "retained_day3": 20805,
+    "retention_rate_day3": 66.4,
+    "retained_day7": 0,
+    "retention_rate_day7": 0.0
+  },
+  {
+    "first_date": "2017-11-29",
+    "new_users": 17931,
+    "retained_day1": 12512,
+    "retention_rate_day1": 69.78,
+    "retained_day3": 17315,
+    "retention_rate_day3": 96.56,
+    "retained_day7": 0,
+    "retention_rate_day7": 0.0
+  },
+  {
+    "first_date": "2017-11-30",
+    "new_users": 9801,
+    "retained_day1": 9273,
+    "retention_rate_day1": 94.61,
+    "retained_day3": 9341,
+    "retention_rate_day3": 95.31,
+    "retained_day7": 0,
+    "retention_rate_day7": 0.0
+  },
+  {
+    "first_date": "2017-12-01",
+    "new_users": 255,
+    "retained_day1": 230,
+    "retention_rate_day1": 90.2,
+    "retained_day3": 0,
+    "retention_rate_day3": 0.0,
+    "retained_day7": 0,
+    "retention_rate_day7": 0.0
+  },
+  {
+    "first_date": "2017-12-02",
+    "new_users": 18,
+    "retained_day1": 13,
+    "retention_rate_day1": 72.22,
+    "retained_day3": 0,
+    "retention_rate_day3": 0.0,
+    "retained_day7": 0,
+    "retention_rate_day7": 0.0
+  },
+  {
+    "first_date": "2017-12-03",
+    "new_users": 1,
+    "retained_day1": 0,
+    "retention_rate_day1": 0.0,
+    "retained_day3": 0,
+    "retention_rate_day3": 0.0,
+    "retained_day7": 0,
+    "retention_rate_day7": 0.0
+  }
+]

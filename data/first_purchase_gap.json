@@ -1,0 +1,22 @@
+[
+  {
+    "gap_group": "1天内",
+    "user_count": 121057
+  },
+  {
+    "gap_group": "2-3天",
+    "user_count": 157259
+  },
+  {
+    "gap_group": "4-7天",
+    "user_count": 194527
+  },
+  {
+    "gap_group": "7天以上",
+    "user_count": 27227
+  },
+  {
+    "gap_group": "当天购买",
+    "user_count": 169240
+  }
+]

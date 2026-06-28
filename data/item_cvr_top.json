@@ -1,0 +1,502 @@
+[
+  {
+    "item_id": 1881953,
+    "pv": 18,
+    "fav": 0,
+    "cart": 0,
+    "buy": 127,
+    "total_uv": 141,
+    "interest_uv": 18,
+    "pv_to_buy_rate": 705.56
+  },
+  {
+    "item_id": 10497,
+    "pv": 23,
+    "fav": 0,
+    "cart": 0,
+    "buy": 72,
+    "total_uv": 91,
+    "interest_uv": 23,
+    "pv_to_buy_rate": 313.04
+  },
+  {
+    "item_id": 4244177,
+    "pv": 35,
+    "fav": 0,
+    "cart": 0,
+    "buy": 97,
+    "total_uv": 123,
+    "interest_uv": 35,
+    "pv_to_buy_rate": 277.14
+  },
+  {
+    "item_id": 3557522,
+    "pv": 105,
+    "fav": 6,
+    "cart": 0,
+    "buy": 293,
+    "total_uv": 375,
+    "interest_uv": 111,
+    "pv_to_buy_rate": 263.96
+  },
+  {
+    "item_id": 1411566,
+    "pv": 39,
+    "fav": 2,
+    "cart": 0,
+    "buy": 108,
+    "total_uv": 131,
+    "interest_uv": 41,
+    "pv_to_buy_rate": 263.41
+  },
+  {
+    "item_id": 2628872,
+    "pv": 18,
+    "fav": 0,
+    "cart": 0,
+    "buy": 47,
+    "total_uv": 60,
+    "interest_uv": 18,
+    "pv_to_buy_rate": 261.11
+  },
+  {
+    "item_id": 1777337,
+    "pv": 26,
+    "fav": 0,
+    "cart": 0,
+    "buy": 65,
+    "total_uv": 83,
+    "interest_uv": 26,
+    "pv_to_buy_rate": 250.0
+  },
+  {
+    "item_id": 331334,
+    "pv": 65,
+    "fav": 1,
+    "cart": 0,
+    "buy": 157,
+    "total_uv": 220,
+    "interest_uv": 66,
+    "pv_to_buy_rate": 237.88
+  },
+  {
+    "item_id": 1927740,
+    "pv": 16,
+    "fav": 0,
+    "cart": 0,
+    "buy": 36,
+    "total_uv": 47,
+    "interest_uv": 16,
+    "pv_to_buy_rate": 225.0
+  },
+  {
+    "item_id": 3236112,
+    "pv": 13,
+    "fav": 0,
+    "cart": 0,
+    "buy": 29,
+    "total_uv": 42,
+    "interest_uv": 13,
+    "pv_to_buy_rate": 223.08
+  },
+  {
+    "item_id": 921668,
+    "pv": 13,
+    "fav": 0,
+    "cart": 0,
+    "buy": 29,
+    "total_uv": 41,
+    "interest_uv": 13,
+    "pv_to_buy_rate": 223.08
+  },
+  {
+    "item_id": 2519522,
+    "pv": 12,
+    "fav": 1,
+    "cart": 0,
+    "buy": 29,
+    "total_uv": 39,
+    "interest_uv": 13,
+    "pv_to_buy_rate": 223.08
+  },
+  {
+    "item_id": 333655,
+    "pv": 43,
+    "fav": 2,
+    "cart": 0,
+    "buy": 93,
+    "total_uv": 121,
+    "interest_uv": 45,
+    "pv_to_buy_rate": 206.67
+  },
+  {
+    "item_id": 1501399,
+    "pv": 61,
+    "fav": 0,
+    "cart": 0,
+    "buy": 126,
+    "total_uv": 176,
+    "interest_uv": 61,
+    "pv_to_buy_rate": 206.56
+  },
+  {
+    "item_id": 4879155,
+    "pv": 9,
+    "fav": 0,
+    "cart": 1,
+    "buy": 20,
+    "total_uv": 26,
+    "interest_uv": 10,
+    "pv_to_buy_rate": 200.0
+  },
+  {
+    "item_id": 1189521,
+    "pv": 20,
+    "fav": 0,
+    "cart": 0,
+    "buy": 40,
+    "total_uv": 54,
+    "interest_uv": 20,
+    "pv_to_buy_rate": 200.0
+  },
+  {
+    "item_id": 955861,
+    "pv": 34,
+    "fav": 1,
+    "cart": 0,
+    "buy": 67,
+    "total_uv": 91,
+    "interest_uv": 35,
+    "pv_to_buy_rate": 191.43
+  },
+  {
+    "item_id": 577682,
+    "pv": 90,
+    "fav": 3,
+    "cart": 0,
+    "buy": 162,
+    "total_uv": 244,
+    "interest_uv": 93,
+    "pv_to_buy_rate": 174.19
+  },
+  {
+    "item_id": 4520791,
+    "pv": 11,
+    "fav": 0,
+    "cart": 0,
+    "buy": 19,
+    "total_uv": 27,
+    "interest_uv": 11,
+    "pv_to_buy_rate": 172.73
+  },
+  {
+    "item_id": 3004476,
+    "pv": 18,
+    "fav": 0,
+    "cart": 0,
+    "buy": 31,
+    "total_uv": 46,
+    "interest_uv": 18,
+    "pv_to_buy_rate": 172.22
+  },
+  {
+    "item_id": 5159189,
+    "pv": 29,
+    "fav": 2,
+    "cart": 0,
+    "buy": 52,
+    "total_uv": 75,
+    "interest_uv": 31,
+    "pv_to_buy_rate": 167.74
+  },
+  {
+    "item_id": 1553835,
+    "pv": 109,
+    "fav": 1,
+    "cart": 0,
+    "buy": 179,
+    "total_uv": 285,
+    "interest_uv": 110,
+    "pv_to_buy_rate": 162.73
+  },
+  {
+    "item_id": 3067663,
+    "pv": 13,
+    "fav": 0,
+    "cart": 0,
+    "buy": 21,
+    "total_uv": 34,
+    "interest_uv": 13,
+    "pv_to_buy_rate": 161.54
+  },
+  {
+    "item_id": 2467209,
+    "pv": 11,
+    "fav": 0,
+    "cart": 1,
+    "buy": 19,
+    "total_uv": 25,
+    "interest_uv": 12,
+    "pv_to_buy_rate": 158.33
+  },
+  {
+    "item_id": 1003148,
+    "pv": 18,
+    "fav": 3,
+    "cart": 0,
+    "buy": 32,
+    "total_uv": 41,
+    "interest_uv": 21,
+    "pv_to_buy_rate": 152.38
+  },
+  {
+    "item_id": 710368,
+    "pv": 10,
+    "fav": 0,
+    "cart": 0,
+    "buy": 15,
+    "total_uv": 21,
+    "interest_uv": 10,
+    "pv_to_buy_rate": 150.0
+  },
+  {
+    "item_id": 3394744,
+    "pv": 14,
+    "fav": 0,
+    "cart": 0,
+    "buy": 21,
+    "total_uv": 33,
+    "interest_uv": 14,
+    "pv_to_buy_rate": 150.0
+  },
+  {
+    "item_id": 691635,
+    "pv": 38,
+    "fav": 1,
+    "cart": 0,
+    "buy": 55,
+    "total_uv": 85,
+    "interest_uv": 39,
+    "pv_to_buy_rate": 141.03
+  },
+  {
+    "item_id": 4106029,
+    "pv": 20,
+    "fav": 0,
+    "cart": 0,
+    "buy": 28,
+    "total_uv": 45,
+    "interest_uv": 20,
+    "pv_to_buy_rate": 140.0
+  },
+  {
+    "item_id": 4245163,
+    "pv": 10,
+    "fav": 0,
+    "cart": 0,
+    "buy": 14,
+    "total_uv": 18,
+    "interest_uv": 10,
+    "pv_to_buy_rate": 140.0
+  },
+  {
+    "item_id": 561662,
+    "pv": 56,
+    "fav": 3,
+    "cart": 0,
+    "buy": 82,
+    "total_uv": 118,
+    "interest_uv": 59,
+    "pv_to_buy_rate": 138.98
+  },
+  {
+    "item_id": 2279520,
+    "pv": 32,
+    "fav": 0,
+    "cart": 0,
+    "buy": 44,
+    "total_uv": 73,
+    "interest_uv": 32,
+    "pv_to_buy_rate": 137.5
+  },
+  {
+    "item_id": 2151651,
+    "pv": 16,
+    "fav": 0,
+    "cart": 0,
+    "buy": 22,
+    "total_uv": 31,
+    "interest_uv": 16,
+    "pv_to_buy_rate": 137.5
+  },
+  {
+    "item_id": 953686,
+    "pv": 11,
+    "fav": 0,
+    "cart": 0,
+    "buy": 15,
+    "total_uv": 26,
+    "interest_uv": 11,
+    "pv_to_buy_rate": 136.36
+  },
+  {
+    "item_id": 4240391,
+    "pv": 40,
+    "fav": 1,
+    "cart": 0,
+    "buy": 55,
+    "total_uv": 95,
+    "interest_uv": 41,
+    "pv_to_buy_rate": 134.15
+  },
+  {
+    "item_id": 3807796,
+    "pv": 9,
+    "fav": 0,
+    "cart": 2,
+    "buy": 14,
+    "total_uv": 18,
+    "interest_uv": 11,
+    "pv_to_buy_rate": 127.27
+  },
+  {
+    "item_id": 4635539,
+    "pv": 11,
+    "fav": 0,
+    "cart": 1,
+    "buy": 15,
+    "total_uv": 24,
+    "interest_uv": 12,
+    "pv_to_buy_rate": 125.0
+  },
+  {
+    "item_id": 1628109,
+    "pv": 10,
+    "fav": 0,
+    "cart": 2,
+    "buy": 15,
+    "total_uv": 25,
+    "interest_uv": 12,
+    "pv_to_buy_rate": 125.0
+  },
+  {
+    "item_id": 3323032,
+    "pv": 10,
+    "fav": 1,
+    "cart": 1,
+    "buy": 15,
+    "total_uv": 24,
+    "interest_uv": 12,
+    "pv_to_buy_rate": 125.0
+  },
+  {
+    "item_id": 4234435,
+    "pv": 15,
+    "fav": 2,
+    "cart": 0,
+    "buy": 21,
+    "total_uv": 31,
+    "interest_uv": 17,
+    "pv_to_buy_rate": 123.53
+  },
+  {
+    "item_id": 2092675,
+    "pv": 11,
+    "fav": 1,
+    "cart": 2,
+    "buy": 17,
+    "total_uv": 28,
+    "interest_uv": 14,
+    "pv_to_buy_rate": 121.43
+  },
+  {
+    "item_id": 216509,
+    "pv": 8,
+    "fav": 0,
+    "cart": 2,
+    "buy": 12,
+    "total_uv": 17,
+    "interest_uv": 10,
+    "pv_to_buy_rate": 120.0
+  },
+  {
+    "item_id": 4282175,
+    "pv": 170,
+    "fav": 1,
+    "cart": 0,
+    "buy": 203,
+    "total_uv": 340,
+    "interest_uv": 171,
+    "pv_to_buy_rate": 118.71
+  },
+  {
+    "item_id": 1999290,
+    "pv": 56,
+    "fav": 0,
+    "cart": 8,
+    "buy": 75,
+    "total_uv": 125,
+    "interest_uv": 64,
+    "pv_to_buy_rate": 117.19
+  },
+  {
+    "item_id": 4378979,
+    "pv": 45,
+    "fav": 2,
+    "cart": 0,
+    "buy": 55,
+    "total_uv": 87,
+    "interest_uv": 47,
+    "pv_to_buy_rate": 117.02
+  },
+  {
+    "item_id": 4459449,
+    "pv": 13,
+    "fav": 1,
+    "cart": 0,
+    "buy": 16,
+    "total_uv": 23,
+    "interest_uv": 14,
+    "pv_to_buy_rate": 114.29
+  },
+  {
+    "item_id": 2280002,
+    "pv": 15,
+    "fav": 0,
+    "cart": 0,
+    "buy": 17,
+    "total_uv": 29,
+    "interest_uv": 15,
+    "pv_to_buy_rate": 113.33
+  },
+  {
+    "item_id": 3807528,
+    "pv": 39,
+    "fav": 0,
+    "cart": 0,
+    "buy": 44,
+    "total_uv": 76,
+    "interest_uv": 39,
+    "pv_to_buy_rate": 112.82
+  },
+  {
+    "item_id": 5080360,
+    "pv": 16,
+    "fav": 1,
+    "cart": 0,
+    "buy": 19,
+    "total_uv": 30,
+    "interest_uv": 17,
+    "pv_to_buy_rate": 111.76
+  },
+  {
+    "item_id": 3835208,
+    "pv": 20,
+    "fav": 0,
+    "cart": 0,
+    "buy": 22,
+    "total_uv": 40,
+    "interest_uv": 20,
+    "pv_to_buy_rate": 110.0
+  }
+]

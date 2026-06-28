@@ -3,7 +3,7 @@
 // ============================================================
 const C = {sienna:'#C65D3E',teal:'#1B6B5A',gold:'#B8860B',plum:'#6B3A5D',sky:'#3B7EA1',red:'#B91C1C',muted:'#57534E',border:'#D6D3D1',cream:'#F8F5F0',charcoal:'#1C1917'};
 const CHART_COLORS = [C.sienna, C.teal, C.gold, C.plum, C.sky, C.red];
-const API_BASE = window.location.protocol + '//' + window.location.hostname + ':5000';
+const API_BASE = '';  // 禁用 API，直接使用 demo 数据
 
 // 全局状态
 let dateStart = null, dateEnd = null;

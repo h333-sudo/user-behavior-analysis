@@ -1,0 +1,83 @@
+[
+  {
+    "date": "2017-11-25",
+    "pv_uv": 686953,
+    "interest_uv": 303322,
+    "buy_uv": 73404,
+    "pv_to_interest_rate": 44.15,
+    "interest_to_buy_rate": 24.2,
+    "overall_cvr": 10.69
+  },
+  {
+    "date": "2017-11-26",
+    "pv_uv": 695869,
+    "interest_uv": 313787,
+    "buy_uv": 76058,
+    "pv_to_interest_rate": 45.09,
+    "interest_to_buy_rate": 24.24,
+    "overall_cvr": 10.93
+  },
+  {
+    "date": "2017-11-27",
+    "pv_uv": 689260,
+    "interest_uv": 301862,
+    "buy_uv": 78841,
+    "pv_to_interest_rate": 43.8,
+    "interest_to_buy_rate": 26.12,
+    "overall_cvr": 11.44
+  },
+  {
+    "date": "2017-11-28",
+    "pv_uv": 688042,
+    "interest_uv": 299901,
+    "buy_uv": 74583,
+    "pv_to_interest_rate": 43.59,
+    "interest_to_buy_rate": 24.87,
+    "overall_cvr": 10.84
+  },
+  {
+    "date": "2017-11-29",
+    "pv_uv": 697542,
+    "interest_uv": 307344,
+    "buy_uv": 78371,
+    "pv_to_interest_rate": 44.06,
+    "interest_to_buy_rate": 25.5,
+    "overall_cvr": 11.24
+  },
+  {
+    "date": "2017-11-30",
+    "pv_uv": 709586,
+    "interest_uv": 312071,
+    "buy_uv": 78757,
+    "pv_to_interest_rate": 43.98,
+    "interest_to_buy_rate": 25.24,
+    "overall_cvr": 11.1
+  },
+  {
+    "date": "2017-12-01",
+    "pv_uv": 718184,
+    "interest_uv": 327476,
+    "buy_uv": 75415,
+    "pv_to_interest_rate": 45.6,
+    "interest_to_buy_rate": 23.03,
+    "overall_cvr": 10.5
+  },
+  {
+    "date": "2017-12-02",
+    "pv_uv": 939383,
+    "interest_uv": 414546,
+    "buy_uv": 91226,
+    "pv_to_interest_rate": 44.13,
+    "interest_to_buy_rate": 22.01,
+    "overall_cvr": 9.71
+  },
+  {
+    "date": "2017-12-03",
+    "pv_uv": 936431,
+    "interest_uv": 409492,
+    "buy_uv": 91164,
+    "pv_to_interest_rate": 43.73,
+    "interest_to_buy_rate": 22.26,
+    "overall_cvr": 9.74
+  }
+]

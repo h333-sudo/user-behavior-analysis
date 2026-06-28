@@ -1,0 +1,22 @@
+[
+  {
+    "behavior": "pv",
+    "count": 89660671,
+    "percentage": 89.58
+  },
+  {
+    "behavior": "cart",
+    "count": 5530446,
+    "percentage": 5.53
+  },
+  {
+    "behavior": "fav",
+    "count": 2888258,
+    "percentage": 2.89
+  },
+  {
+    "behavior": "buy",
+    "count": 2015807,
+    "percentage": 2.01
+  }
+]
