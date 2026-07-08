@@ -29,33 +29,47 @@ async function doSearch() {
 
 function clearSearch() { document.getElementById('searchInput').value = ''; closePanel(); }
 
-// 从已加载的静态数据中搜索商品
+// 搜索数据缓存
+let _itemDetails = null;
+let _categoryItems = null;
+
+// 加载搜索数据（从静态JSON文件）
+async function loadSearchData() {
+  try {
+    const [items, catItems] = await Promise.all([
+      getData('item_details.json'),
+      getData('category_items.json')
+    ]);
+    _itemDetails = items || [];
+    _categoryItems = catItems || {};
+  } catch (e) {
+    _itemDetails = [];
+    _categoryItems = {};
+  }
+}
+
+// 从静态数据中搜索商品
 function findItemFromData(itemId) {
-  const hot = (window._dataMap && window._dataMap['item_hot_rank.json']) || [];
-  const cvr = (window._dataMap && window._dataMap['item_cvr_top.json']) || [];
-  const low = (window._dataMap && window._dataMap['item_low_cvr.json']) || [];
-  const all = [...hot, ...cvr, ...low];
-  const found = all.find(d => d.item_id == itemId);
+  if (!_itemDetails) return null;
+  const found = _itemDetails.find(d => d.item_id == itemId);
   if (!found) return null;
   return {
     item_id: found.item_id,
-    uv: found.total_uv || found.uv || 0,
-    cvr: found.pv_to_buy_rate || found.cvr || 0,
+    uv: found.pv_uv || found.total_uv || found.uv || 0,
+    cvr: found.cvr || found.pv_to_buy_rate || 0,
     behavior_stats: { pv: found.pv || 0, buy: found.buy || 0, fav: found.fav || 0, cart: found.cart || 0 }
   };
 }
 
-// 从已加载的静态数据中搜索类目
+// 从静态数据中搜索类目下的商品
 function findCategoryFromData(catId) {
-  const hot = (window._dataMap && window._dataMap['category_hot_rank.json']) || [];
-  const cvr = (window._dataMap && window._dataMap['category_cvr.json']) || [];
-  const all = [...hot, ...cvr];
-  const items = all.filter(d => d.category_id == catId);
-  if (!items.length) return null;
+  if (!_categoryItems) return null;
+  const items = _categoryItems[catId];
+  if (!items || !items.length) return null;
   return items.slice(0, 20).map(d => ({
-    item_id: d.item_id || d.category_id,
+    item_id: d.item_id,
     pv: d.pv || 0, fav: d.fav || 0, cart: d.cart || 0, buy: d.buy || 0,
-    cvr: d.pv_to_buy_rate || d.cvr || 0
+    cvr: d.cvr || d.pv_to_buy_rate || 0
   }));
 }
 
@@ -161,6 +175,9 @@ async function main() {
     dataMap[f] = await getData(f);
   }));
   window._dataMap = dataMap;  // 暴露给搜索函数使用
+
+  // 加载搜索数据（商品详情和类目商品列表）
+  await loadSearchData();
 
   // 特殊处理：低转化数据（仅当 getData 失败时重试，避免覆盖已成功加载的数据）
   if (!dataMap['item_low_cvr.json'] || !dataMap['item_low_cvr.json'].length) {

@@ -49,9 +49,15 @@ function buildParams() {
 }
 
 async function getData(filename) {
+  // 尝试从API获取
   try {
     const resp = await fetch(API_BASE + '/api/data/' + filename + buildParams());
     if (resp.ok) { const d = await resp.json(); if (d && (!Array.isArray(d) || d.length > 0)) return d; }
+  } catch (e) {}
+  // 尝试从本地data目录获取（静态部署）
+  try {
+    const resp2 = await fetch('data/' + filename);
+    if (resp2.ok) { const d = await resp2.json(); if (d && (!Array.isArray(d) || d.length > 0)) return d; }
   } catch (e) {}
   return DEMO[filename.replace('.json', '')] || [];
 }
