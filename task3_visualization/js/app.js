@@ -29,17 +29,50 @@ async function doSearch() {
 
 function clearSearch() { document.getElementById('searchInput').value = ''; closePanel(); }
 
+// 从已加载的静态数据中搜索商品
+function findItemFromData(itemId) {
+  const hot = (window._dataMap && window._dataMap['item_hot_rank.json']) || [];
+  const cvr = (window._dataMap && window._dataMap['item_cvr_top.json']) || [];
+  const low = (window._dataMap && window._dataMap['item_low_cvr.json']) || [];
+  const all = [...hot, ...cvr, ...low];
+  const found = all.find(d => d.item_id == itemId);
+  if (!found) return null;
+  return {
+    item_id: found.item_id,
+    uv: found.total_uv || found.uv || 0,
+    cvr: found.pv_to_buy_rate || found.cvr || 0,
+    behavior_stats: { pv: found.pv || 0, buy: found.buy || 0, fav: found.fav || 0, cart: found.cart || 0 }
+  };
+}
+
+// 从已加载的静态数据中搜索类目
+function findCategoryFromData(catId) {
+  const hot = (window._dataMap && window._dataMap['category_hot_rank.json']) || [];
+  const cvr = (window._dataMap && window._dataMap['category_cvr.json']) || [];
+  const all = [...hot, ...cvr];
+  const items = all.filter(d => d.category_id == catId);
+  if (!items.length) return null;
+  return items.slice(0, 20).map(d => ({
+    item_id: d.item_id || d.category_id,
+    pv: d.pv || 0, fav: d.fav || 0, cart: d.cart || 0, buy: d.buy || 0,
+    cvr: d.pv_to_buy_rate || d.cvr || 0
+  }));
+}
+
 async function showItemDetail(itemId) {
   const panel = document.getElementById('detailPanel');
   document.getElementById('panelTitle').textContent = '商品 #' + itemId;
   const content = document.getElementById('panelContent');
   content.innerHTML = '<p style="color:var(--muted)">加载中…</p>';
   panel.classList.add('open');
-  const data = await apiFetch('/api/item/' + itemId);
-  if (!data) { content.innerHTML = '<p style="color:var(--red)">未找到该商品数据</p>'; return; }
+  // 优先尝试API，失败则从本地数据查找
+  let data = await apiFetch('/api/item/' + itemId);
+  if (!data) data = findItemFromData(itemId);
+  if (!data) { content.innerHTML = '<p style="color:var(--red)">未找到该商品数据（仅支持已加载的商品ID）</p>'; return; }
   const bs = data.behavior_stats || {};
-  content.innerHTML = `<div class="stat-grid"><div class="stat-item"><div class="label">独立用户</div><div class="value">${fmtNum(data.uv)}</div></div><div class="stat-item"><div class="label">转化率</div><div class="value">${data.cvr}%</div></div><div class="stat-item"><div class="label">浏览</div><div class="value">${fmtNum(bs.pv||0)}</div></div><div class="stat-item"><div class="label">购买</div><div class="value">${fmtNum(bs.buy||0)}</div></div><div class="stat-item"><div class="label">收藏</div><div class="value">${fmtNum(bs.fav||0)}</div></div><div class="stat-item"><div class="label">加购</div><div class="value">${fmtNum(bs.cart||0)}</div></div></div><h4 style="font-family:var(--font-display);font-size:16px;margin:16px 0 8px;">按小时行为分布</h4><div class="mini-chart" id="panelChartHourly"></div>`;
+  content.innerHTML = `<div class="stat-grid"><div class="stat-item"><div class="label">独立用户</div><div class="value">${fmtNum(data.uv)}</div></div><div class="stat-item"><div class="label">转化率</div><div class="value">${data.cvr}%</div></div><div class="stat-item"><div class="label">浏览</div><div class="value">${fmtNum(bs.pv||0)}</div></div><div class="stat-item"><div class="label">购买</div><div class="value">${fmtNum(bs.buy||0)}</div></div><div class="stat-item"><div class="label">收藏</div><div class="value">${fmtNum(bs.fav||0)}</div></div><div class="stat-item"><div class="label">加购</div><div class="value">${fmtNum(bs.cart||0)}</div></div></div>`;
   if (data.hourly_dist && data.hourly_dist.length) {
+    content.innerHTML += '<h4 style="font-family:var(--font-display);font-size:16px;margin:16px 0 8px;">按小时行为分布</h4><div class="mini-chart" id="panelChartHourly"></div>';
     const ch = echarts.init(document.getElementById('panelChartHourly'));
     ch.setOption({backgroundColor:'transparent',tooltip:{trigger:'axis'},grid:{left:40,right:10,bottom:20,top:10},xAxis:{type:'category',data:data.hourly_dist.map(d=>d.hour+':00'),axisLabel:{color:C.muted,fontSize:10},axisLine:{lineStyle:{color:C.border}}},yAxis:{axisLine:{show:false},axisLabel:{color:C.muted},splitLine:{lineStyle:{color:'#EDEBE8'}}},series:[{type:'bar',data:data.hourly_dist.map(d=>d.count),itemStyle:{color:C.sienna,borderRadius:[2,2,0,0]}}]});
   }
@@ -51,10 +84,12 @@ async function showCategoryDetail(catId) {
   const content = document.getElementById('panelContent');
   content.innerHTML = '<p style="color:var(--muted)">加载中…</p>';
   panel.classList.add('open');
-  const data = await apiFetch('/api/category/' + catId + '/items?limit=20');
-  if (!data || !data.items) { content.innerHTML = '<p style="color:var(--red)">未找到该类目数据</p>'; return; }
-  let html = '<p style="color:var(--muted);font-size:12px;margin-bottom:12px;font-family:var(--font-mono);">TOP ' + data.items.length + '</p><div style="max-height:70vh;overflow-y:auto;">';
-  data.items.forEach((item, i) => {
+  // 优先尝试API，失败则从本地数据查找
+  let data = await apiFetch('/api/category/' + catId + '/items?limit=20');
+  let items = data && data.items ? data.items : findCategoryFromData(catId);
+  if (!items || !items.length) { content.innerHTML = '<p style="color:var(--red)">未找到该类目数据（仅支持已加载的类目ID）</p>'; return; }
+  let html = '<p style="color:var(--muted);font-size:12px;margin-bottom:12px;font-family:var(--font-mono);">TOP ' + items.length + '</p><div style="max-height:70vh;overflow-y:auto;">';
+  items.forEach((item, i) => {
     html += '<div class="category-card" onclick="showItemDetail(' + item.item_id + ')" style="margin-bottom:1px;"><div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:var(--muted);font-size:12px;font-family:var(--font-mono);">#' + (i+1) + ' 商品' + item.item_id + '</span><span style="color:var(--teal);font-size:12px;font-family:var(--font-mono);">CVR ' + item.cvr + '%</span></div><div style="display:flex;gap:12px;margin-top:4px;font-size:12px;font-family:var(--font-mono);"><span>pv:' + fmtNum(item.pv) + '</span><span style="color:var(--gold);">fav:' + fmtNum(item.fav) + '</span><span style="color:var(--teal);">cart:' + fmtNum(item.cart) + '</span><span style="color:var(--sienna);">buy:' + fmtNum(item.buy) + '</span></div></div>';
   });
   html += '</div>';
@@ -125,6 +160,7 @@ async function main() {
   await Promise.all(files.map(async f => {
     dataMap[f] = await getData(f);
   }));
+  window._dataMap = dataMap;  // 暴露给搜索函数使用
 
   // 特殊处理：低转化数据（仅当 getData 失败时重试，避免覆盖已成功加载的数据）
   if (!dataMap['item_low_cvr.json'] || !dataMap['item_low_cvr.json'].length) {
